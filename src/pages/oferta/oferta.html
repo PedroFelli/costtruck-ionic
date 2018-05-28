@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar crolor="primay">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label stacked>Carga</ion-label>
+      <ion-input type="text" formControlName="carga"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Ds Oferta</ion-label>
+      <ion-input type="text" formControlName="ds_oferta"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Dt Previsao</ion-label>
+      <ion-input type="date" formControlName="dt_previsao"></ion-input>
+    </ion-item>
+
+    <div padding>
+    <button ion-button roun (click)="showMap()">Destino de retirada</button>
+    </div>
+
+
+    <ion-item>
+      <ion-label stacked>Destino de retirada</ion-label>
+      <ion-input type="text" formControlName="ds_endereco_retirada"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Nr Distancia</ion-label>
+      <ion-input type="text" formControlName="nr_distancia"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Cf Entrega</ion-label>
+      <ion-input type="text" formControlName="cf_entrega"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>
+    </div>
+  
+  </form>
+ 
+</ion-content>

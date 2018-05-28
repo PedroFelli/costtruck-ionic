@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar crolor="primay">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="form">
+    <ion-item>
+      <ion-label stacked>Oferta</ion-label>
+      <ion-input type="text" formControlName="cd_oferta"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Motorista</ion-label>
+      <ion-input type="text" formControlName="cd_motorista"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Data retirada</ion-label>
+      <ion-input type="date" formControlName="dt_retirada"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Data entrega</ion-label>
+      <ion-input type="date" formControlName="dt_entrega"></ion-input>
+    </ion-item>
+   
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>
+    </div>
+
+  </form>
+
+</ion-content>

@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ofertas </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-list>
+  <ion-item-sliding *ngFor="let oferta of ofertas | async">
+
+    <ion-item>
+      <h1>{{oferta.carga}}</h1>
+     
+    </ion-item>
+
+    <ion-item-options side="left">
+      <button ion-button color="secondary" (click)="editOferta(oferta)">
+        <ion-icon name="create"></ion-icon>
+      </button>
+      <button ion-button color="danger" (click)="removeOferta(oferta.key)">
+        <ion-icon name="trash">
+
+        </ion-icon>
+      </button>
+    </ion-item-options>
+
+  </ion-item-sliding>
+</ion-list>
+
+
+<ion-fab bottom right>
+  <button ion-fab color="primary" (click)="newOferta()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-fab>

@@ -1,0 +1,41 @@
+<ion-header>
+<ion-navbar crolor="primay">
+  <ion-title>{{title}}</ion-title>
+</ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+<form [formGroup]="form">
+  <ion-item>
+    <ion-label stacked>Usuario</ion-label>
+    <ion-input type="text" formControlName="usuario"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Placa</ion-label>
+    <ion-input type="text" formControlName="nr_placa"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Modelo</ion-label>
+    <ion-input type="text" formControlName="dr_modelo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Marca</ion-label>
+    <ion-input type="text" formControlName="ds_marca"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Tipo veiculo</ion-label>
+    <ion-input type="text" formControlName="tp_veiculos"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label stacked>Ano</ion-label>
+    <ion-input type="date" formControlName="nr_ano"></ion-input>
+  </ion-item>
+  <div padding>
+    <button ion-button block type="submit" [disabled]="!form.valid" (click)="onSubmit()">Salvar</button>
+  </div>
+  
+  </form>
+</ion-content>
